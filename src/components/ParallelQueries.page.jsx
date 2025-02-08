@@ -14,5 +14,5 @@ export const ParallelQueriesPage = () => {
   const {data: superHeroes} = useQuery('super-heroes', fetchSuperHeroes)
   const {data: friends} = useQuery('friends', fetchFriends)
   
-  return <div>ParallelQueries Page </div>
+  return <div>ParallelQueries Page</div>
 }
