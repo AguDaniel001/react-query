@@ -7,7 +7,7 @@ const fetchSuperHeroes = () => {
 export const useSuperHeroesData = (onSuccess, onError) => {
  return useQuery(
     'super-heroes', fetchSuperHeroes, {
-      // cacheTime: 5000, 
+      // cacheTime: 5000,  
       // staleTime: 0, 
       // enabled: true,
       // refetchOnMount: true,
@@ -16,12 +16,12 @@ export const useSuperHeroesData = (onSuccess, onError) => {
       // refetchIntervalInBackground: false,
       onSuccess: onSuccess,
       onError: onError,
-      select: (data) => {
-        return data.data.map((hero) => ({
-          name: hero.name,
-        }))
-        // return superHeroNames
-      }
+      // select: (data) => {
+      //   return data.data.map((hero) => ({
+      //     name: hero.name,
+      //   }))
+      //   return superHeroNames
+      // }
     }
   )
 }
